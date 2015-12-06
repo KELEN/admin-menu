@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./styles/default.css">
+    <style>
+        code {
+            font: 13px Verdana,Tahoma, Arial, Helvetica, sans-serif;
+        }
+        #kmenu li {
+            list-style: none;
+        }
+        #kmenu span {
+            padding: 6px 10px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        #kmenu span:hover {
+        }
+    </style>
+</head>
+<body>
+</body>
+<h1>配置项</h1>
+
+<pre><code>// 配置数据项
+var arr = [
+    { uid:1, title: "体育新闻", father: 0 },
+    { uid:2, title: "热点新闻", father: 0 },
+    { uid:3, title: "足球新闻", father: 1 },
+    { uid:4, title: "篮球新闻", father: 1 },
+    { uid:5, title: "娱乐新闻", father: 2 },
+    { uid:6, title: "火爆新闻", father: 2 },
+    { uid:7, title: "搞笑新闻", father: 2 },
+    { uid:8, title: "三级新闻", father: 3 },
+]
+</code>
+</pre>
+
+<pre><code>gen.config({
+    keys: {
+        id: "uid",
+        title: "title",
+        fatherId: "father"
+    }
+})
+
+gen.init($("#kmenu"), arr);
+</code></pre>
+<h1>例子</h1>
+<div id="kmenu">
+</div>
+<script type="text/javascript" src="js/requirejs.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</html>
